@@ -125,6 +125,7 @@ function scroll () {
 
 function dealRoom (room) {
   room.log(function(rs) {
+    $msgs.empty()
     rs.forEach(function(item) {
       $msgs.append('<li><b>'+item.from+'</b>: '+item.data+'</li>')
     })
