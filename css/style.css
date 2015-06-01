@@ -34,8 +34,8 @@ body {
   position: absolute;
   height: 100%;
   top: 0;
-  left: 20%;
-  right: 20%;
+  left: 25%;
+  right: 25%;
   background-color: #fff;
   -webkit-user-select: text;
   -moz-user-select: text;
@@ -100,6 +100,9 @@ body {
   width: 85%;
   margin: 0 auto;
   outline: none;
+}
+.from {
+  text-align: right;
 }
 @media (max-width: 640px) {
   body {

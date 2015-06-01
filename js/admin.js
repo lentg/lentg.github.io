@@ -16,6 +16,7 @@ $(function() {
   var $users = $('#users')
   var $msgs = $('#msgs')
   var $msg = $('#msg')
+  var $input = $('#input')
   var html = $('#sign').html()
 
   layer.open({
@@ -54,6 +55,7 @@ $(function() {
           $(this).removeClass('unread').addClass('active')
           rt.room(this.id, function(obj) {
             room = obj
+            $input.focus()
             room.log(function(logs) {
               showLogs(logs)
             })
@@ -69,8 +71,16 @@ $(function() {
 
   function showLogs (logs) {
     $msgs.empty()
+    // logs.forEach(function(log) {
+    //   $msgs.append('<li><b>'+log.from+'</b>: '+log.data+'</li>')
+    // })
     logs.forEach(function(log) {
-      $msgs.append('<li><b>'+log.from+'</b>: '+log.data+'</li>')
+      if (clientId != log.from) {
+        $msgs.append('<li class="from">'+log.data+' :<b>'+log.from+'</b></li>')
+      } else {
+        $msgs.append('<li><b>'+log.from+'</b>: '+log.data+'</li>')
+      }
+      // var klass = log.from == 'clientId' ? 'class="to"' : ''
     })
     $msgs.scrollTop($msgs[0].scrollHeight)
   }
@@ -79,14 +89,14 @@ $(function() {
     var txt = this.msg.value
     $msgs.append('<li><b>'+clientId+'</b>: '+txt+'</li>')
     room.send(txt)
-    this.msg.value = ''
+    $input.val('').focus()
     scroll()
     return false;
   })
   
   rt.on('message', function(data) {
     if (from == data.fromPeerId) {
-      $msgs.append('<li><b>'+from+'</b>: '+data.msg+'</li>')
+      $msgs.append('<li class="from">'+data.msg+' :<b>'+from+'</b></li>')
       scroll()
       return;
     };

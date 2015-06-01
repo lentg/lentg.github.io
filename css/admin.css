@@ -1,1 +1,151 @@
-.layui-layer-demo{background-color:#eee}.layui-layer-demo .layui-layer-title{border:none;background-color:#333;color:#fff}#sign{padding:20px;text-align:center}#sign div{height:38px}.side-nav{position:fixed;display:block;top:0;bottom:0;left:0;width:260px;height:auto;overflow:visible;background-color:#F4F4F4;z-index:100;color:#000;padding:12px 0 0 0;-webkit-transition:-webkit-transform .3s ease-out;-moz-transition:-moz-transform .3s ease-out;-o-transition:-o-transform .3s ease-out;transition:-webkit-transform .3s ease-out,-moz-transform .3s ease-out,-o-transform .3s ease-out,transform .3s ease-out;background-color:#044974}#users{padding:0;list-style:none}#users li{line-height:38px;color:#fff;padding:0;margin:0;cursor:pointer;padding-left:20px}#users li:hover{background-color:rgba(0,0,0,0.1)}#users li.active{font-weight:bold;background-color:rgba(0,0,0,0.1)}#users li.unread{color:red}.messages-container{position:absolute;height:100%;top:0;left:260px;right:0;-webkit-user-select:text;-moz-user-select:text;-ms-user-select:text;user-select:text}.messages-container .scrollable{position:absolute;width:100%;padding-left:0;top:0;left:0;bottom:70px;overflow-y:scroll;overflow-x:hidden;word-wrap:break-word;-webkit-overflow-scrolling:touch}.messages-container .scrollable li{padding:15px 20px}.messages-container .scrollable li:nth-child(odd){background-color:#fbfbfb}.messages-container .scrollable::-webkit-scrollbar{width:6px;background:transparent}.messages-container .scrollable::-webkit-scrollbar-thumb{background-color:#eaeaea;-webkit-border-radius:50px}.messages-container .scrollable::-webkit-scrollbar-corner{background-color:transparent}.messages-container .footer{position:absolute;padding:14px 20px 0px 20px;background:#fff;border-top:1px solid #eaeaea;z-index:100;bottom:0;left:0;right:0;height:70px}.messages-container .footer input{display:block;padding-top:9px;padding-bottom:9px;padding-right:38px;overflow-y:hidden;resize:none;height:35px;line-height:normal;border:1px solid #dfdfdf;background-color:#fff;border-radius:2px;padding:2px 8px;box-shadow:1px 1px 0 rgba(0,0,0,0.2);position:relative;width:85%;margin:0 auto;outline:none}::-webkit-scrollbar{width:12px}::-webkit-scrollbar-track{box-shadow:inset 0 0 6px #f4f4f4;border-radius:10px}.sidebar:hover ::-webkit-scrollbar-track{box-shadow:inset 0 0 6px rgba(0,0,0,0.3)}.sidebar:hover ::-webkit-scrollbar-thumb{border-radius:10px;background:#f4f4f4;-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.5)}::-webkit-scrollbar-thumb:window-inactive{background:rgba(255,0,0,0.4)}
+.layui-layer-demo {
+  background-color: #eee;
+}
+.layui-layer-demo .layui-layer-title {
+  border: none;
+  background-color: #333;
+  color: #fff;
+}
+#sign {
+  padding: 20px;
+  text-align: center;
+}
+#sign div {
+  height: 38px;
+}
+.side-nav {
+  position: fixed;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 260px;
+  height: auto;
+  overflow: visible;
+  background-color: #F4F4F4;
+  z-index: 100;
+  color: #000;
+  padding: 12px 0 0 0;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  -moz-transition: -moz-transform 0.3s ease-out;
+  -o-transition: -o-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out, -moz-transform 0.3s ease-out, -o-transform 0.3s ease-out, transform 0.3s ease-out;
+  background-color: #044974;
+}
+#users {
+  padding: 0;
+  list-style: none;
+}
+#users li {
+  line-height: 38px;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  padding-left: 20px;
+}
+#users li:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+#users li.active {
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+#users li.unread {
+  color: red;
+}
+.messages-container {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 260px;
+  right: 0;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+.messages-container .scrollable {
+  position: absolute;
+  width: 100%;
+  padding-left: 0;
+  top: 0;
+  left: 0;
+  bottom: 70px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  word-wrap: break-word;
+  -webkit-overflow-scrolling: touch;
+}
+.messages-container .scrollable li {
+  padding: 15px 20px;
+}
+.messages-container .scrollable li:nth-child(odd) {
+  background-color: #fbfbfb;
+}
+.messages-container .scrollable::-webkit-scrollbar {
+  width: 6px;
+  background: transparent;
+}
+.messages-container .scrollable::-webkit-scrollbar-thumb {
+  background-color: #eaeaea;
+  -webkit-border-radius: 50px;
+}
+.messages-container .scrollable::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+.messages-container .footer {
+  position: absolute;
+  padding: 14px 20px 0px 20px;
+  background: #fff;
+  border-top: 1px solid #eaeaea;
+  z-index: 100;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+}
+.messages-container .footer input {
+  display: block;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-right: 38px;
+  overflow-y: hidden;
+  resize: none;
+  height: 35px;
+  line-height: normal;
+  border: 1px solid #dfdfdf;
+  background-color: #fff;
+  border-radius: 2px;
+  padding: 2px 8px;
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  width: 85%;
+  margin: 0 auto;
+  outline: none;
+}
+.from {
+  text-align: right;
+}
+/* 设置滚动条的样式 */
+::-webkit-scrollbar {
+  width: 12px;
+}
+/* 滚动槽 */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px #f4f4f4;
+  border-radius: 10px;
+}
+.sidebar:hover ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+/* 滚动条滑块 */
+.sidebar:hover ::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #f4f4f4;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(255, 0, 0, 0.4);
+}
+/*# sourceMappingURL=admin.css.map */
