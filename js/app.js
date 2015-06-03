@@ -14,19 +14,22 @@ $(function() {
 
   layer.open({
       type: 1,
+      title: 'Sign',
       skin: 'layui-layer-demo',
       closeBtn: false,
       area: '350px',
       shift: 2,
       shadeClose: true,
       content: $('#sign').html(),
-      // content: '<div style="padding:20px;">即传入skin:"样式名"，然后你就可以为所欲为了。<br>你怎么样给她整容都行<br><br><br>我是华丽的酱油==。</div>'
       success: function(layero, index){
-        this.content='00'
         $('#in').on('click', function() {
+          $('#up').removeClass('active')
+          $(this).addClass('active')
           $('#sign .ai').hide()
         })
         $('#up').on('click', function() {
+          $('#in').removeClass('active')
+          $(this).addClass('active')
           $('#sign .ai').show()
         })
         $('#sign form').on('submit', function() {
