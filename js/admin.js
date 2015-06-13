@@ -25,6 +25,7 @@ $(function() {
       closeBtn: false,
       area: '350px',
       shift: 2,
+      title: '登录',
       shadeClose: true,
       content: html,
       success: function(layero, index){
